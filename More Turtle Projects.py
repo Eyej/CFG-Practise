@@ -1,0 +1,38 @@
+# Practising Turtle
+import turtle
+# Draw a block with concentric circles inside
+turtle.pensize(5)
+turtle.speed('slowest')
+turtle.penup()
+turtle.setposition(-200, 200)       # Draw a circle with radius 20px
+turtle.pendown()
+turtle.color('gold', 'black')
+turtle.begin_fill()
+turtle.forward(400)
+turtle.right(90)
+turtle.forward(400)
+turtle.right(90)
+turtle.forward(400)
+turtle.right(90)
+turtle.forward(400)
+turtle.right(90)
+turtle.end_fill()
+turtle.penup()
+turtle.home
+turtle.pencolor('gold')
+turtle.pensize(10)
+turtle.setposition(0, -80)
+turtle.pendown()
+turtle.circle(80)
+turtle.penup()
+turtle.setposition(0, -130)
+turtle.pendown()
+turtle.circle(130)
+turtle.penup()
+turtle.setposition(0, -180)
+turtle.pendown()
+turtle.circle(180)
+turtle.hideturtle()
+#turtle.circle(50, 180)
+
+turtle.done()
