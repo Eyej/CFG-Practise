@@ -28,6 +28,7 @@
 #     print('Number is odd')
 
 # Area Calculator
+
 # print('Welcome to the area calculator designed by IJ, pick a choice from the menu:')
 #
 # print('Triangle\n Square\n Circle')
@@ -73,15 +74,49 @@
 #         result = result * i
 #         print(result)
 
-# Finding all prime numbers in a range
-value = int(input('Enter any number '))
-if value <= 2:
-    print('Error, try a new value')
+# # Finding all prime numbers in a range
+# value = int(input('Enter any number '))
+# if value <= 2:
+#     print('Error, try a new value')
+# else:
+#     count = []
+#     for num in range(2, (value + 1)):
+#         # if num % 2 > 2:
+#         for i in range(2, num):
+#             if num%i == 0:
+#                 count.append(i)
+#                 print('List of prime numbers: ', count)     # Something is wrong with this but i'll ignore for now
+
+print('Welcome to the area calculator designed by IJ, pick a choice from the menu:')
+
+print('Triangle\n Square\n Circle')
+shape = input('Select a shape: ')
+
+
+def triangle():
+    breadth = int(input('what is its breadth:'))
+    height = int(input('what is its height: '))
+    area = 0.5 * breadth * height
+    return area
+
+
+def square():
+    length = int(input('Enter a length: '))
+    area_square = length**2
+    return area_square
+
+
+def circle():
+    radius = int(input('Enter a radius: '))
+    circle_area = 3.142 * (radius**2)
+    return circle_area
+
+if shape == 'triangle':
+    print('The area = {}cm'.format(triangle()))
+elif shape == 'square':
+    print('Area = {}cm'.format(square()))
+elif shape == 'circle':
+    print('Area = {}cm'.format(circle()))
 else:
-    count = []
-    for num in range(2, (value + 1)):
-        # if num % 2 > 2:
-        for i in range(2, num):
-            if num%i == 0:
-                count.append(i)
-                print('List of prime numbers: ', count)     # Something is wrong with this but i'll ignore for now
+    print('Sorry, I cannot calculate this area.')
+
